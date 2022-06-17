@@ -1,29 +1,72 @@
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+  font-family: 'Joan', serif;
 }
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+    animation: App-logo-spin infinite 110s linear;
   }
 }
-
-.App-header {
-  background-color: #282c34;
+.App-title {
+  font-weight: 100;
+}
+.App-sub {
+  font-size: 30px;
+  font-weight:lighter;
+  font-style: oblique;
+  padding-bottom: 20px;
+}
+.App-cta {
+  font-size: 30px;
+  padding: 8px 40px;
+  box-shadow: 0 0 10px 1px honeydew;
+  border-radius: 13px;
+  margin-top: 50px;
+}
+.App-main {
+  background-color: #232324;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding-top: 200px;
+  justify-content: flex-start;
+  font-size: calc(20px + 2vmin);
+  color: rgba(224, 226, 234, 0.833);
 }
-
+.App-links {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  border: 1px solid white;
+}
+.App-main header {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  max-width: 100%;
+  gap: 70px;
+  font-size: 30px;
+  padding: 30px;
+  top:0;
+  box-shadow: 0 0 6px 1px #676864;
+  width: 100%;
+  color: #676864;
+}
+header div:hover {
+  color: hsl(84, 2%, 56%);
+  cursor:zoom-in;
+}
+footer {
+  position: fixed;
+  bottom:0;
+  font-size: 20px;
+  padding: 20px;
+  width: 100%;
+  background-color: #9d9d9c;
+  color: #09150e;
+}
 .App-link {
   color: #61dafb;
 }

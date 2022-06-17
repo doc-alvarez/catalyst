@@ -1,23 +1,25 @@
-import logo from './logo.svg';
+import speed from './speed.svg';
+import styled from 'styled-components'
 import './App.css';
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <main className="App-main">
+        <header>
+          <div>Home</div>
+          <div>Hire us</div>
+          <div>Trusted Clients</div>
+        </header>
+        <h1 className="App-title">iCatalyst</h1>
+        
+          <span className='App-sub'>Taking your e-comm store  to another level.</span>
+          <img width="50px" src={speed} alt=""></img>
+        
+        <div className='App-cta'>Contact us</div>
+        <footer>2022 - iCatalyst - All rights reserved.</footer>
+      </main>
     </div>
   );
 }
