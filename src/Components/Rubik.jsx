@@ -26,8 +26,8 @@ function MyAnimatedBox() {
 
 export function ShowKubik(props) {
     return (
-        <div className="rubik_container" style = {{backgroundColor: "#101019"}}>
-        <Canvas camera={{ position: [80, 85, 82], fov: 12 }}>
+        <div className="rubik_container" style = {{backgroundColor: "#101019", opacity: props.hide }}>
+        <Canvas camera={{ position: [80, 85, 82], fov: 13 }}>
             <pointLight position={[60, 50, 10]} intensity={1.9} />
             <Suspense fallback={null}>
                 <MyAnimatedBox />
