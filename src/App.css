@@ -78,8 +78,8 @@ section div {
   border: transparent;
   box-shadow: 0 0 10px 1px whitesmoke;
   position: fixed;
-  top: 20px;
-  left: 20px;
+  bottom: 80px;
+  right: 40px;
   transition: all ease 800ms;
 }
 .hire:hover {
