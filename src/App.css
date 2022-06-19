@@ -2,14 +2,42 @@
   text-align: center;
   font-family: 'Joan', serif;
 }
+html {
+  cursor: pointer;
+}
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 110s linear;
-  }
+.App-main header {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  max-width: 100%;
+  gap: 70px;
+  font-size: 30px;
+  padding: 30px;
+  top:0;
+  width: 100%;
+  color: #ffffff5e;
+  z-index: 100;
+}
+.rubik_container {
+  position: fixed;
+  top:0;
+  left:0;
+  height: 100vh;
+  width: 100vw;
+  z-index: 0;
 }
 .App-title {
   font-weight: 100;
+  z-index: 100;
+  margin-top: 348px;
+}
+header div {
+  transition: all ease 500ms;
+  padding: 10px;
+}
+.hovered {
+  color: #b7c7f6;
 }
 .App-sub {
   font-size: 30px;
@@ -25,7 +53,7 @@
   margin-top: 50px;
 }
 .App-main {
-  background-color: #232324;
+  background-color: #101019;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -41,22 +69,9 @@
   align-items: center;
   border: 1px solid white;
 }
-.App-main header {
-  position: fixed;
-  display: flex;
-  justify-content: center;
-  max-width: 100%;
-  gap: 70px;
-  font-size: 30px;
-  padding: 30px;
-  top:0;
-  box-shadow: 0 0 6px 1px #676864;
-  width: 100%;
-  color: #676864;
-}
 header div:hover {
-  color: hsl(84, 2%, 56%);
-  cursor:zoom-in;
+  color: #b7c7f6;
+  cursor: pointer;
 }
 footer {
   position: fixed;

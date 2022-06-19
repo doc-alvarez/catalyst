@@ -1,24 +1,24 @@
-import speed from './speed.svg';
-import styled from 'styled-components'
+import React from 'react'
 import './App.css';
+import { ShowKubik } from './Components/Rubik.jsx'
 
 
 function App() {
+  const path = React.useRef(window.location.pathname);
+  
   return (
     <div className="App">
       <main className="App-main">
         <header>
-          <div>Home</div>
-          <div>Hire us</div>
+        { (path.current == "/") ? <div className='hovered'>Base</div> : <div>Base</div>}
+          <div>What we do</div>
+          <div>Who we are</div>
           <div>Trusted Clients</div>
         </header>
-        <h1 className="App-title">iCatalyst</h1>
-        
-          <span className='App-sub'>Taking your e-comm store  to another level.</span>
-          <img width="50px" src={speed} alt=""></img>
-        
+        <h1 className="App-title">Catalyst</h1>
+        <ShowKubik />
         <div className='App-cta'>Contact us</div>
-        <footer>2022 - iCatalyst - All rights reserved.</footer>
+        <footer>2022 - Catalyst - All rights reserved.</footer>
       </main>
     </div>
   );
