@@ -4,6 +4,7 @@
 }
 html {
   cursor: pointer;
+  background-color: #101019;
 }
 
 .App-main header {
@@ -12,25 +13,48 @@ html {
   justify-content: center;
   max-width: 100%;
   gap: 70px;
-  font-size: 30px;
+  font-size: 20px;
+  letter-spacing: 1px;
   padding: 30px;
   top:0;
   width: 100%;
   color: #ffffff5e;
-  z-index: 100;
+  z-index: 1000;
+}
+section {
+    z-index: 10;
+    height: 50vh;
+    position: relative;
+    bottom: 0;
+    margin: auto;
+    padding-top: 42vh;
+    overflow-x: scroll;
+    display: flex;
+    min-width: 400vw;
+}
+section div {
+  /* display: none; */
+  width: 100vw;
+  height: 50vh;
+}
+.slide1, .slide2, .slide3, .slide4 {
+  scroll-behavior: smooth;
+  transition: all ease 400ms;
 }
 .rubik_container {
   position: fixed;
-  top:0;
+  top: 0px;
   left:0;
-  height: 100vh;
+  height: 70vh;
   width: 100vw;
   z-index: 0;
 }
 .App-title {
   font-weight: 100;
-  z-index: 100;
-  margin-top: 348px;
+  z-index: 1;
+}
+header {
+  z-index: 100000;
 }
 header div {
   transition: all ease 500ms;
@@ -54,11 +78,11 @@ header div {
 }
 .App-main {
   background-color: #101019;
-  min-height: 100vh;
+  height: 100vh;
   display: flex;
+  position: relative;
   flex-direction: column;
   align-items: center;
-  padding-top: 200px;
   justify-content: flex-start;
   font-size: calc(20px + 2vmin);
   color: rgba(224, 226, 234, 0.833);
@@ -77,7 +101,7 @@ footer {
   position: fixed;
   bottom:0;
   font-size: 20px;
-  padding: 20px;
+  padding: 14px;
   width: 100%;
   background-color: #9d9d9c;
   color: #09150e;
@@ -86,11 +110,13 @@ footer {
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {transform: 'translateX(0vw)'}
+  to {transform: 'translateX(-100vw)'}
 }

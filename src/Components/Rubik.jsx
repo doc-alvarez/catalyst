@@ -10,11 +10,10 @@ import { Canvas, useFrame } from '@react-three/fiber'
 function MyAnimatedBox() {
     const { scene } = useGLTF("scene.gltf")
     const myMesh = React.useRef()
-    useFrame(({ clock }) => {
-        
-        myMesh.current.rotation.x = clock.getElapsedTime()
-        myMesh.current.rotation.y = clock.getElapsedTime()
     
+    useFrame(({ clock }) => {
+            myMesh.current.rotation.x = Math.sin(clock.getElapsedTime());
+            myMesh.current.rotation.y = Math.cos(clock.getElapsedTime());
       })
     return (
       <mesh ref={myMesh}>
@@ -28,7 +27,7 @@ function MyAnimatedBox() {
 export function ShowKubik(props) {
     return (
         <div className="rubik_container" style = {{backgroundColor: "#101019"}}>
-        <Canvas camera={{ position: [80, 85, 82], fov: 15 }}>
+        <Canvas camera={{ position: [80, 85, 82], fov: 12 }}>
             <pointLight position={[60, 50, 10]} intensity={1.9} />
             <Suspense fallback={null}>
                 <MyAnimatedBox />
