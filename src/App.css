@@ -2,9 +2,11 @@
   text-align: center;
   font-family: 'Joan', serif;
 }
+
 html {
   cursor: pointer;
-  background-color: #101019;
+  /* background-color: #101019; */
+  /* background-color: #505092; */
 }
 
 .App-main header {
@@ -20,23 +22,21 @@ html {
   width: 100%;
   color: #ffffff5e;
   z-index: 1000;
+  letter-spacing: 3px;
 }
-section {
-    z-index: 10;
+div.section {
+    /* z-index: 10; */
     height: 70vh;
-    position: relative;
+    /* position: relative; */
     bottom: 0;
     margin: auto;
-    overflow-x: scroll;
+    overflow-x: hidden;
     display: flex;
-    width: 400vw;
+    /* width: 400vw; */
     scroll-behavior: smooth;
 }
-section div {
-  /* display: none; */
-  
-}
-.slide1, .slide2, .slide3, .slide4 {
+
+.slide1, .slide2, .slide3, .slide4, .slide5 {
   scroll-behavior: smooth;
   transition: all ease 400ms;
   display: flex;
@@ -45,30 +45,95 @@ section div {
   width: 100vw;
 }
 .slide1 {
-  align-items: flex-end;
+  position: relative;
+  align-items: center;
   justify-content: flex-end;
+  z-index: 0;
+  letter-spacing: 5px;
 }
-.slide2, .slide3 {
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
+.slide2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  z-index: 2;
 }
-
-.slide4, .slide3 {
-  align-items: center;
-  justify-content: center;
+.slide3 p {
+  padding: 22px;
+  letter-spacing: 6px;
+  width: 100%;
+  text-align: center;
+  
 }
 .slide3 div {
-  width: 50%;
+  padding: 0 150px;
+  height: 400vh;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
+.main_goals {
+  flex: 1 0 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 95px;
+  justify-content: center;
+  align-items: center;
+  letter-spacing: 5px;
+  
+}
+.main_goals div:hover {
+  color: #b7c7f6;
+  text-decoration: underline;
+}
+.details_container {
+  transform: translateX(-200px);
+  transition: all ease 1000ms;
+  width: 400px;
+  font-size: smaller;
+  height: 481px;
+  margin-bottom: 10px;
+  border-radius: 20px;
+  box-shadow: 0 0 10px #b7c7f6;
+  background-color: #11ffd9de;
+  color: #505092;
+
+  
+}
+.details_container p {
+  padding: 20px;
+}
+.wrapper {
+  flex: 1 0 50%;
+  display: flex;
+  flex-direction: column;
+  overflow: visible;
+  align-items: center;
+  position: relative;
+  justify-content: flex-end;
+  transition: all ease 1000ms;
+}
+
+
+
 .rubik_container {
+  background-color: transparent;
   position: fixed;
   top: 30px;
   left:0;
   height: 80vh;
   width: 100vw;
   z-index: 0;
+  opacity: 1;
+  transition: all ease-in-out 1000ms;
+}
+.robot_container {
+  background-color: transparent;
+  position: fixed;
+  left:0;
+  height: 80vh;
+  width: 100vw;
+  z-index: 100;
   opacity: 1;
   transition: all ease-in-out 1000ms;
 }
@@ -88,14 +153,24 @@ section div {
 .App-title {
   font-weight: 100;
   z-index: 1;
-  text-align: center;
+  text-align: start;
   width: 100vw;
   margin: 0;
+  color: white;
+  position: absolute;
+  bottom: 100px;
+  left: 140px;
 }
 .App-subtitle {
   width: 100vw;
-  font-size: 20px;
-  text-align: center;
+  font-size: 24px;
+  z-index: 1;
+  position: absolute;
+  left: 235px;
+  margin-top: 5px;
+  
+  font-style: italic;
+  text-align: start;
 }
 header {
   z-index: 100000;
@@ -121,7 +196,9 @@ header div {
   margin-top: 50px;
 }
 .App-main {
-  background-color: #101019;
+  /* background-color: #101019; */
+  /* background-color: #505092; */
+  /* background-color: #7f7fd1; */
   height: 100vh;
   display: flex;
   position: relative;
@@ -147,7 +224,7 @@ footer {
   font-size: 20px;
   padding: 14px;
   width: 100%;
-  background-color: #9d9d9c;
+  background-color: white;
   color: #09150e;
 }
 .App-link {
@@ -160,7 +237,30 @@ footer {
   animation-duration: 1.5s;
 }
 
+.fadeIn {
+  opacity: 1;
+}
+.fadeOut {
+  opacity: 0;
+}
+
 @keyframes fade {
   from {transform: 'translateX(0vw)'}
   to {transform: 'translateX(-100vw)'}
+}
+body {
+  background: linear-gradient(178deg, hsl(237deg 45% 9%), #4e497d);
+	animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
 }

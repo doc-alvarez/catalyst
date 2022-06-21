@@ -12,8 +12,10 @@ function MyAnimatedBox() {
     const myMesh = React.useRef()
     
     useFrame(({ clock }) => {
-            myMesh.current.rotation.x = Math.sin(clock.getElapsedTime());
-            myMesh.current.rotation.y = Math.cos(clock.getElapsedTime());
+            myMesh.current.rotation.x = Math.sin(clock.getElapsedTime())/2;
+            myMesh.current.rotation.y = Math.cos(clock.getElapsedTime())/3;
+            myMesh.current.rotation.z = Math.cos(clock.getElapsedTime())/1;
+
       })
     return (
       <mesh ref={myMesh}>
@@ -26,9 +28,10 @@ function MyAnimatedBox() {
 
 export function ShowKubik(props) {
     return (
-        <div className="rubik_container" style = {{backgroundColor: "#101019", opacity: props.hide }}>
+        <div className="rubik_container" style = {{backgroundColor: "transparent", opacity: props.hide }}>
         <Canvas camera={{ position: [80, 85, 82], fov: 13 }}>
-            <pointLight position={[60, 50, 10]} intensity={1.9} />
+            <pointLight position={[18, 20, 10]} intensity={1.9} />
+            <ambientLight />
             <Suspense fallback={null}>
                 <MyAnimatedBox />
                 <OrbitControls />
