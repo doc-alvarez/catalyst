@@ -9,6 +9,31 @@ html {
   /* background-color: #505092; */
 }
 
+.brands_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  max-width: 1000px;
+  margin:120px;
+  flex-wrap: wrap;
+}
+.product_container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap:100px;
+  justify-content: center;
+  align-items: center;
+}
+.product {
+  height: 200px;
+  width: 50vw;
+  border-radius: 20px;
+  box-shadow: 0 0 10px 0 white;
+}
+
 .App-main header {
   position: fixed;
   display: flex;
@@ -27,6 +52,7 @@ html {
 div.section {
     /* z-index: 10; */
     height: 70vh;
+    width: 600vw;
     /* position: relative; */
     bottom: 0;
     margin: auto;
@@ -36,12 +62,12 @@ div.section {
     scroll-behavior: smooth;
 }
 
-.slide1, .slide2, .slide3, .slide4, .slide5 {
+.slide1, .slide2, .slide3, .slide4, .slide5, .slide6 {
   scroll-behavior: smooth;
   transition: all ease 400ms;
   display: flex;
   flex-direction: column;
-  padding-bottom: 30px;
+  /* padding-bottom: 30px; */
   width: 100vw;
 }
 .slide1 {
@@ -52,9 +78,7 @@ div.section {
   letter-spacing: 5px;
 }
 .slide2 {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  
   z-index: 2;
 }
 .slide3 p {
@@ -73,64 +97,90 @@ div.section {
 }
 
 .main_goals {
-  flex: 1 0 50%;
-  display: flex;
-  flex-direction: column;
-  gap: 95px;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  grid-template-rows: 25% 25% 25% 25%;
+  gap: 80px 10px;
+  justify-items: center;
+  font-size: 30px;
+  margin: 250px 50px 0;
   align-items: center;
   letter-spacing: 5px;
-  
+  box-sizing: border-box;
+  z-index: 10;
 }
+
+.slide2_modal {
+  position: fixed;
+  transform: scale(0);
+  top: 50%;
+  left:55%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 10px 0 white;
+  height: fit-content;
+  border-radius: 20px;
+  max-width: fit-content;
+  margin-left: -300px;
+  margin-top: -300px;
+  background-color: white;
+  z-index: 100;
+  padding: 20px;
+  transition: all ease 800ms;
+}
+.slide2_modal div {
+  font-size: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 30px;
+  color: rgb(40, 23, 49);
+}
+.main_goals div {
+  padding: 10px;
+  min-width: 100px;
+}
+
 .main_goals div:hover {
   color: #b7c7f6;
-  text-decoration: underline;
-}
-.details_container {
-  transform: translateX(-200px);
-  transition: all ease 1000ms;
-  width: 400px;
-  font-size: smaller;
-  height: 481px;
-  margin-bottom: 10px;
-  border-radius: 20px;
-  box-shadow: 0 0 10px #b7c7f6;
-  background-color: #11ffd9de;
-  color: #505092;
-
+  border: 1px solid wheat;
+  font-size: 30px;
+  opacity: 1;
   
 }
-.details_container p {
-  padding: 20px;
+.unhov {
+  opacity: 0.3;
 }
-.wrapper {
-  flex: 1 0 50%;
-  display: flex;
-  flex-direction: column;
-  overflow: visible;
-  align-items: center;
-  position: relative;
-  justify-content: flex-end;
-  transition: all ease 1000ms;
-}
-
-
 
 .rubik_container {
   background-color: transparent;
   position: fixed;
-  top: 30px;
-  left:0;
+  bottom: 180px;
+  left: 0px;
   height: 80vh;
   width: 100vw;
+  z-index: -10;
+  opacity: 1;
+  transition: all ease-in-out 1000ms;
+}
+.robot2_container {
+  background-color: transparent;
+  position: fixed;
+  left:400px;
+  top: 150px;
+  height: 150vh;
+  width: 100vw;
   z-index: 0;
+  overflow: visible;
   opacity: 1;
   transition: all ease-in-out 1000ms;
 }
 .robot_container {
   background-color: transparent;
   position: fixed;
-  left:0;
+  left:200px;
   height: 80vh;
   width: 100vw;
   z-index: 100;
@@ -154,19 +204,20 @@ div.section {
   font-weight: 100;
   z-index: 1;
   text-align: start;
+  font-size: 100px;
   width: 100vw;
   margin: 0;
   color: white;
   position: absolute;
   bottom: 100px;
-  left: 140px;
+  left: 240px;
 }
 .App-subtitle {
   width: 100vw;
   font-size: 24px;
   z-index: 1;
   position: absolute;
-  left: 235px;
+  left: 350px;
   margin-top: 5px;
   
   font-style: italic;
@@ -224,6 +275,7 @@ footer {
   font-size: 20px;
   padding: 14px;
   width: 100%;
+  z-index: -10;
   background-color: white;
   color: #09150e;
 }
