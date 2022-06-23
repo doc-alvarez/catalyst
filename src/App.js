@@ -3,6 +3,7 @@ import './App.css';
 import { ShowKubik } from './Components/Rubik.jsx'
 import { ShowBull } from './Components/bull';
 import { ShowRobot } from './Components/robot';
+import { ShowBaby} from './Components/baby'
 import amyrisSvg from './Amyris.svg'
 import tegra from './tegra.png'
 import lcp from './LCP.svg'
@@ -56,6 +57,7 @@ function App() {
           { (slide === 2) ? <ShowKubik /> : null }
           { (slide === 1) ? <ShowBull /> : null }
           { (slide === 4) ? <ShowRobot /> : null }
+          { (slide === 5) ? <ShowBaby /> : null }
           
           
         <div className='section'>
@@ -150,17 +152,29 @@ function App() {
           </div>
           <div className='slide5'>
             <div className='product_container'>
-              <div className='product'></div>
-              <div className='product'></div>
+              <div className='product'>
+                <h1>R2-D2</h1>
+                <div>Subscription</div>
+                <div>Daily audits</div>         
+                <div>24/7 support</div>
+                <div className='price'>$29.99/m</div>
+              </div>
+              <div className='product'>
+                <h1>C-3PO</h1>
+                <div>Full optimization</div>
+                <div>One time payment</div>
+                <div>Critical stores</div>
+                <div className='price'>$500</div>
+              </div>
 
             </div>
             
           </div>
           <div className='slide6'>
           <div className='product_container'>
-              <div className='product'></div>
-              <div className='product'></div>
-
+          <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/fWoI9DXmpdk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/7Rrv9qFMWNM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/AQqFZ5t8uNc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
           </div>
           

@@ -22,16 +22,31 @@ html {
   width: 100%;
   height: 100vh;
   display: flex;
-  flex-direction: column;
   gap:100px;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
 }
 .product {
-  height: 200px;
-  width: 50vw;
+  height: 500px;
+  width: 300px;
+  position: relative;
+  font-size: 20px;
+  box-shadow: 0 0 8px 0 white;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
   border-radius: 20px;
-  box-shadow: 0 0 10px 0 white;
+  padding: 10px;
+  background-color: white;
+  color:rgb(49, 47, 60);
+  opacity: 1;
+}
+.price {
+ font-size: 50px;
+ padding-top: 100px !important;
+}
+.product div {
+  padding: 10px;
 }
 
 .App-main header {
@@ -127,7 +142,7 @@ div.section {
   background-color: white;
   z-index: 100;
   padding: 20px;
-  transition: all ease 800ms;
+  transition: all ease 900ms;
 }
 .slide2_modal div {
   font-size: 30px;
@@ -145,7 +160,7 @@ div.section {
 
 .main_goals div:hover {
   color: #b7c7f6;
-  border: 1px solid wheat;
+  border: 1px solid white;
   font-size: 30px;
   opacity: 1;
   
@@ -172,7 +187,20 @@ div.section {
   top: 150px;
   height: 150vh;
   width: 100vw;
-  z-index: 0;
+  z-index: -10;
+  overflow: visible;
+  opacity: 1;
+  transition: all ease-in-out 1000ms;
+}
+.robot3_container {
+  background-color: transparent;
+  position: fixed;
+  right:0px;
+  top: 0px;
+  height: 100vh;
+  width: 100vw;
+  
+  
   overflow: visible;
   opacity: 1;
   transition: all ease-in-out 1000ms;
@@ -275,7 +303,7 @@ footer {
   font-size: 20px;
   padding: 14px;
   width: 100%;
-  z-index: -10;
+  z-index: -100;
   background-color: white;
   color: #09150e;
 }
@@ -301,7 +329,7 @@ footer {
   to {transform: 'translateX(-100vw)'}
 }
 body {
-  background: linear-gradient(178deg, hsl(237deg 45% 9%), #4e497d);
+  background: linear-gradient(180deg, #190b2e, #4e497d,#22ebb9);
 	animation: gradient 15s ease infinite;
 }
 
