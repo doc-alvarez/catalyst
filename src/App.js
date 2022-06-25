@@ -11,7 +11,9 @@ import fid from './FID.svg'
 import cls from './CLS.svg'
 import visiva from './logo-visiva.png'
 import cuka from './cuka.jpeg'
-import logi from './logitech.png'
+import alvarez from './alvarezlogo.svg'
+
+
 function App() {
   const [slide, setSlide] = React.useState(1);
   const [goal, setGoal] = React.useState('');
@@ -47,12 +49,12 @@ function App() {
     <div className="App">
       <main className="App-main">
         <header>
-          { (slide === 1) ? <div id="1" className='hovered'>Root</div> : <div id="1" onMouseOver={(evt) => handleRoute(evt)}>Root</div>}
-          { (slide === 2) ? <div id="2" className='hovered'>What we do</div> : <div id="2" onMouseOver={(evt) => handleRoute(evt)}>What we do</div>}
-          { (slide === 3) ? <div id="3" className='hovered'>Who we are</div> : <div id="3" onMouseOver={(evt) => handleRoute(evt)}>Who we are</div>}
-          { (slide === 4) ? <div id="4" className='hovered'>Trusted Clients</div> : <div id="4" onMouseOver={(evt) => handleRoute(evt)}>Trusted Clients</div>}
-          { (slide === 5) ? <div id="5" className='hovered'>Our Products</div> : <div id="5" onMouseOver={(evt) => handleRoute(evt)}>Our Products</div>}
-          { (slide === 6) ? <div id="5" className='hovered'>Learn</div> : <div id="6" onMouseOver={(evt) => handleRoute(evt)}>Learn</div>}
+          { (slide === 1) ? <div id="1" className='hovered'>Root</div> : <div id="1" onClick={(evt) => handleRoute(evt)}>Root</div>}
+          { (slide === 2) ? <div id="2" className='hovered'>What we do</div> : <div id="2" onClick={(evt) => handleRoute(evt)}>What we do</div>}
+          { (slide === 3) ? <div id="3" className='hovered'>Who we are</div> : <div id="3" onClick={(evt) => handleRoute(evt)}>Who we are</div>}
+          { (slide === 4) ? <div id="4" className='hovered'>Trusted Clients</div> : <div id="4" onClick={(evt) => handleRoute(evt)}>Trusted Clients</div>}
+          { (slide === 5) ? <div id="5" className='hovered'>Our Products</div> : <div id="5" onClick={(evt) => handleRoute(evt)}>Our Products</div>}
+          { (slide === 6) ? <div id="5" className='hovered'>Learn</div> : <div id="6" onClick={(evt) => handleRoute(evt)}>Learn</div>}
         </header>
           { (slide === 2) ? <ShowKubik /> : null }
           { (slide === 1) ? <ShowBull /> : null }
@@ -69,12 +71,12 @@ function App() {
             <div className='slide2_title'>Core Web Vitals</div>
             
             <div className='main_goals'>
-            { (goal === "a") ? <div onMouseLeave={() => modalRef.current.style.transform = 'scale(0)'} onMouseOver={(e) => handleGoalChange(e)} className='hovered' id="a">Loading Performance</div> : <div onMouseOver={(e) => handleGoalChange(e)} onMouseLeave={() => modalRef.current.style.transform = 'scale(0)'} className="unhov" id="a">Loading Performance</div>}
-            { (goal === "b") ? <div onMouseLeave={() => modalRef.current.style.transform = 'scale(0)'} onMouseOver={(e) => handleGoalChange(e)} className='hovered' id="b">Interactivity</div> : <div onMouseOver={(e) => handleGoalChange(e)} className="unhov" id="b" onMouseLeave={() => modalRef.current.style.transform = 'scale(0)'}>Interactivity</div> }
-            { (goal === "c") ? <div onMouseLeave={() => modalRef.current.style.transform = 'scale(0)'} onMouseOver={(e) => handleGoalChange(e)} className='hovered' id="c">Visual Stability</div> : <div onMouseOver={(e) => handleGoalChange(e)} className="unhov" id="c" onMouseLeave={() => modalRef.current.style.transform = 'scale(0)'}>Visual Stability</div> }
-            { (goal === "d") ? <div onMouseLeave={() => modalRef.current.style.transform = 'scale(0)'} onMouseOver={(e) => handleGoalChange(e)} className='hovered' id="d">LCP</div> : <div onMouseOver={(e) => handleGoalChange(e)} className="unhov" id="d" onMouseLeave={() => modalRef.current.style.transform = 'scale(0)'}>LCP</div>}
-            { (goal === "e") ? <div onMouseLeave={() => modalRef.current.style.transform = 'scale(0)'} onMouseOver={(e) => handleGoalChange(e)} className='hovered' id="e">FID/TBT</div> : <div onMouseOver={(e) => handleGoalChange(e)} className="unhov" id="e" onMouseLeave={() => modalRef.current.style.transform = 'scale(0)'}>FID/TBT</div> }
-            { (goal === "f") ? <div onMouseLeave={() => modalRef.current.style.transform = 'scale(0)'} onMouseOver={(e) => handleGoalChange(e)} className='hovered' id="f">CLS</div> : <div onMouseOver={(e) => handleGoalChange(e)} className="unhov" id="f" onMouseLeave={() => modalRef.current.style.transform = 'scale(0)'}>CLS</div> }
+            { (goal === "a") ? <div onMouseLeave={() => modalRef.current.style.transform = 'scale(0)'} onClick={(e) => handleGoalChange(e)} className='hovered' id="a">Loading Performance</div> : <div onClick={(e) => handleGoalChange(e)} onMouseLeave={() => modalRef.current.style.transform = 'scale(0)'} className="unhov" id="a">Loading Performance</div>}
+            { (goal === "b") ? <div onMouseLeave={() => modalRef.current.style.transform = 'scale(0)'} onClick={(e) => handleGoalChange(e)} className='hovered' id="b">Interactivity</div> : <div onClick={(e) => handleGoalChange(e)} className="unhov" id="b" onMouseLeave={() => modalRef.current.style.transform = 'scale(0)'}>Interactivity</div> }
+            { (goal === "c") ? <div onMouseLeave={() => modalRef.current.style.transform = 'scale(0)'} onClick={(e) => handleGoalChange(e)} className='hovered' id="c">Visual Stability</div> : <div onClick={(e) => handleGoalChange(e)} className="unhov" id="c" onMouseLeave={() => modalRef.current.style.transform = 'scale(0)'}>Visual Stability</div> }
+            { (goal === "d") ? <div onMouseLeave={() => modalRef.current.style.transform = 'scale(0)'} onClick={(e) => handleGoalChange(e)} className='hovered' id="d">LCP</div> : <div onClick={(e) => handleGoalChange(e)} className="unhov" id="d" onMouseLeave={() => modalRef.current.style.transform = 'scale(0)'}>LCP</div>}
+            { (goal === "e") ? <div onMouseLeave={() => modalRef.current.style.transform = 'scale(0)'} onClick={(e) => handleGoalChange(e)} className='hovered' id="e">FID/TBT</div> : <div onClick={(e) => handleGoalChange(e)} className="unhov" id="e" onMouseLeave={() => modalRef.current.style.transform = 'scale(0)'}>FID/TBT</div> }
+            { (goal === "f") ? <div onMouseLeave={() => modalRef.current.style.transform = 'scale(0)'} onClick={(e) => handleGoalChange(e)} className='hovered' id="f">CLS</div> : <div onClick={(e) => handleGoalChange(e)} className="unhov" id="f" onMouseLeave={() => modalRef.current.style.transform = 'scale(0)'}>CLS</div> }
             </div>
             <div ref={modalRef}className='slide2_modal'>
             { (goal === "a") ? <div>
@@ -143,28 +145,38 @@ function App() {
           <div className='slide4'>
           <div className='brands_container'>
             <img width="200" src={amyrisSvg} />
+            
             <img width="100" src={tegra} />
+            
             <img width="200" src={cuka}></img>
-            <img width="200" src={logi}></img>
 
-            <img src={visiva}></img>
+            <img width="200" src={alvarez}></img>
+
+            <img style={{backgroundColor: 'transparent' }} src={visiva}></img>
           </div>
           </div>
           <div className='slide5'>
             <div className='product_container'>
               <div className='product'>
+              <div>
                 <h1>R2-D2</h1>
                 <div>Subscription</div>
-                <div>Daily audits</div>         
+                <div>Code Reviews</div>
+                <div>Daily audits</div>
+                <div>Team training</div>
+                <div>Performance Budget</div>         
                 <div>24/7 support</div>
+              </div>
                 <div className='price'>$29.99/m</div>
               </div>
               <div className='product'>
+              <div>
                 <h1>C-3PO</h1>
                 <div>Full optimization</div>
-                <div>One time payment</div>
-                <div>Critical stores</div>
-                <div className='price'>$500</div>
+                <div>One time</div>
+                <div>For Critical stores</div>
+              </div>
+                <div className='price'>$499.99</div>
               </div>
 
             </div>

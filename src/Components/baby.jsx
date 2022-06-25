@@ -32,10 +32,10 @@ function MyAnimatedBox() {
 export function ShowBaby(props) {
     return (
         <div className="robot3_container" style = {{backgroundColor: "transparent"}}>
-        <Canvas camera={{position: [-80, 80, 142], fov: 80 }}>
+        <Canvas camera={{position: [-5, -20, 142], fov: 80 }}>
         
             <pointLight position={[60, 50, 10]} intensity={1.9} />
-            
+            <ambientLight />
             <Suspense fallback={null}>
                 <MyAnimatedBox />
                 <OrbitControls />

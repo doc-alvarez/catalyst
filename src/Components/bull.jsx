@@ -14,7 +14,7 @@ function MyAnimatedBox() {
     
     useFrame(({ clock }) => {
     //         myMesh.current.rotation.x = Math.asin(clock.elapsedTime() / 8);
-            myMesh.current.rotation.y = Math.tan(clock.getElapsedTime())/10;
+            // myMesh.current.rotation.y = Math.tan(clock.getElapsedTime())/10;
             // myMesh.current.rotation.y = Math.sin(clock.getElapsedTime())/10;
             // myMesh.current.rotation.z = Math.cos(clock.getElapsedTime())/10;
 
@@ -31,7 +31,7 @@ function MyAnimatedBox() {
 export function ShowBull(props) {
     return (
         <div className="robot_container" style = {{backgroundColor: "transparent", opacity: props.hide }}>
-        <Canvas camera={{ position: [7, -5, 29], fov: 6 }}>
+        <Canvas camera={{ position: [7, -5, 29], fov: 5 }}>
         
             <pointLight position={[60, 50, 10]} intensity={0.9} />
             <ambientLight />
