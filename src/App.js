@@ -79,15 +79,15 @@ function App() {
             <p className='App-subtitle'>Unleash Shopify speed.</p>
           </div>
           <div className='slide2'>
-            <div className='slide2_title'>Core Web Vitals</div>
+            <div className='slide2_title'>We build ultra-fast modern Shopify storefronts</div>
             
             <div className='main_goals'>
-            { (goal === "a") ? <div onMouseLeave={() => modalRef.current.style.transform = 'scale(0)'} onClick={(e) => handleGoalChange(e)} className='hovered' id="a">Loading Performance</div> : <div onClick={(e) => handleGoalChange(e)} onMouseLeave={() => modalRef.current.style.transform = 'scale(0)'} className="unhov" id="a">Loading Performance</div>}
-            { (goal === "b") ? <div onMouseLeave={() => modalRef.current.style.transform = 'scale(0)'} onClick={(e) => handleGoalChange(e)} className='hovered' id="b">Interactivity</div> : <div onClick={(e) => handleGoalChange(e)} className="unhov" id="b" onMouseLeave={() => modalRef.current.style.transform = 'scale(0)'}>Interactivity</div> }
-            { (goal === "c") ? <div onMouseLeave={() => modalRef.current.style.transform = 'scale(0)'} onClick={(e) => handleGoalChange(e)} className='hovered' id="c">Visual Stability</div> : <div onClick={(e) => handleGoalChange(e)} className="unhov" id="c" onMouseLeave={() => modalRef.current.style.transform = 'scale(0)'}>Visual Stability</div> }
-            { (goal === "d") ? <div onMouseLeave={() => modalRef.current.style.transform = 'scale(0)'} onClick={(e) => handleGoalChange(e)} className='hovered' id="d">LCP</div> : <div onClick={(e) => handleGoalChange(e)} className="unhov" id="d" onMouseLeave={() => modalRef.current.style.transform = 'scale(0)'}>LCP</div>}
-            { (goal === "e") ? <div onMouseLeave={() => modalRef.current.style.transform = 'scale(0)'} onClick={(e) => handleGoalChange(e)} className='hovered' id="e">FID/TBT</div> : <div onClick={(e) => handleGoalChange(e)} className="unhov" id="e" onMouseLeave={() => modalRef.current.style.transform = 'scale(0)'}>FID/TBT</div> }
-            { (goal === "f") ? <div onMouseLeave={() => modalRef.current.style.transform = 'scale(0)'} onClick={(e) => handleGoalChange(e)} className='hovered' id="f">CLS</div> : <div onClick={(e) => handleGoalChange(e)} className="unhov" id="f" onMouseLeave={() => modalRef.current.style.transform = 'scale(0)'}>CLS</div> }
+            { (goal === "a") ? <div onMouseLeave={() => modalRef.current.style.transform = 'scale(0)'} onClick={(e) => handleGoalChange(e)} className='hovered' id="a">HYDROGEN</div> : <div onClick={(e) => handleGoalChange(e)} onMouseLeave={() => modalRef.current.style.transform = 'scale(0)'} className="unhov" id="a">HYDROGEN</div>}
+            { (goal === "b") ? <div onMouseLeave={() => modalRef.current.style.transform = 'scale(0)'} onClick={(e) => handleGoalChange(e)} className='hovered' id="b">PERFORMANCE</div> : <div onClick={(e) => handleGoalChange(e)} className="unhov" id="b" onMouseLeave={() => modalRef.current.style.transform = 'scale(0)'}>PERFORMANCE</div> }
+            { (goal === "c") ? <div onMouseLeave={() => modalRef.current.style.transform = 'scale(0)'} onClick={(e) => handleGoalChange(e)} className='hovered' id="c">HEADLESS</div> : <div onClick={(e) => handleGoalChange(e)} className="unhov" id="c" onMouseLeave={() => modalRef.current.style.transform = 'scale(0)'}>HEADLESS</div> }
+            { (goal === "d") ? <div onMouseLeave={() => modalRef.current.style.transform = 'scale(0)'} onClick={(e) => handleGoalChange(e)} className='hovered' id="d">SEO READY</div> : <div onClick={(e) => handleGoalChange(e)} className="unhov" id="d" onMouseLeave={() => modalRef.current.style.transform = 'scale(0)'}>SEO READY</div>}
+            { (goal === "e") ? <div onMouseLeave={() => modalRef.current.style.transform = 'scale(0)'} onClick={(e) => handleGoalChange(e)} className='hovered' id="e">CACHING API</div> : <div onClick={(e) => handleGoalChange(e)} className="unhov" id="e" onMouseLeave={() => modalRef.current.style.transform = 'scale(0)'}>CACHING API</div> }
+            { (goal === "f") ? <div onMouseLeave={() => modalRef.current.style.transform = 'scale(0)'} onClick={(e) => handleGoalChange(e)} className='hovered' id="f">STREAMING SSR</div> : <div onClick={(e) => handleGoalChange(e)} className="unhov" id="f" onMouseLeave={() => modalRef.current.style.transform = 'scale(0)'}>STREAMING SSR</div> }
             </div>
             <div ref={modalRef}className='slide2_modal'>
             { (goal === "a") ? <div>
@@ -139,7 +139,7 @@ function App() {
           
           <p>
           We are passionate Software engineers with more than ten years of experience helping 
-          DTC brands, digital marketers, influencers and developers improve website performance and conversion rates.<br></br>
+          DTC brands, digital marketers, influencers and developers improve Shopify websites performance and conversion rates.<br></br>
           </p>
           <h3>Our Value:</h3>
           <p>👇🏻</p>
@@ -174,7 +174,7 @@ function App() {
               <div className='product'>
               <div>
                 <h1>R2-D2</h1>
-                <div>Subscription</div>
+                <div>Subscription optimization</div>
                 <div>Code Reviews</div>
                 <div>Daily audits</div>
                 <div>Team training</div>
@@ -191,6 +191,16 @@ function App() {
                 <div>For Critical stores</div>
               </div>
                 <div className='price'>$499.99</div>
+              </div>
+              <div className='product'>
+              <div>
+                <h1>Yoda</h1>
+                <div>Hydrogen Storefront</div>
+                <div>Built from scratch</div>
+                <div>Fully Customized</div>
+                <div>Best Experience</div>
+              </div>
+                <div className='price'>$5000</div>
               </div>
 
             </div>
