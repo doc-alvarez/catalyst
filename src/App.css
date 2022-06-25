@@ -24,8 +24,9 @@ html {
 .product_container {
   width: 90%;
   margin: auto;
-  height: 100vh;
+  height: 200vh;
   display: flex;
+  flex-wrap: wrap;
   gap: 150px;
   justify-content: center;
   align-items: center;
@@ -204,12 +205,15 @@ div.section {
 .unhov {
   opacity: 0.3;
 }
-
+.slide6_title {
+  font-family: 'Black Ops One', cursive;
+  margin-bottom: 60px;
+}
 .rubik_container {
   background-color: transparent;
   position: fixed;
   bottom: 90px;
-  left: -100px;
+  left: 100px;
   height: 80vh;
   width: 100vw;
   z-index: -10;
@@ -243,6 +247,7 @@ div.section {
   font-family: 'Black Ops One', cursive;
   margin-left:250px;
   font-size: 70px;
+  color: white;
 }
 .container p {
   /* font-family: 'Black Ops One', cursive; */

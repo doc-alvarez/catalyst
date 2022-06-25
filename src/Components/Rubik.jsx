@@ -12,8 +12,8 @@ function MyAnimatedBox() {
     const myMesh = React.useRef()
     
     useFrame(({ clock }) => {
-            myMesh.current.rotation.x = Math.sin(clock.getElapsedTime())/2;
-            myMesh.current.rotation.y = Math.cos(clock.getElapsedTime())/3;
+            myMesh.current.rotation.x = Math.sin(clock.getElapsedTime())/1;
+            myMesh.current.rotation.y = Math.cos(clock.getElapsedTime())/1;
             myMesh.current.rotation.z = Math.cos(clock.getElapsedTime())/1;
 
       })

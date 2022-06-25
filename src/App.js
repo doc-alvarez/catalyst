@@ -86,7 +86,7 @@ function App() {
             { (goal === "b") ? <div onMouseLeave={() => modalRef.current.style.transform = 'scale(0)'} onClick={(e) => handleGoalChange(e)} className='hovered' id="b">PERFORMANCE</div> : <div onClick={(e) => handleGoalChange(e)} className="unhov" id="b" onMouseLeave={() => modalRef.current.style.transform = 'scale(0)'}>PERFORMANCE</div> }
             { (goal === "c") ? <div onMouseLeave={() => modalRef.current.style.transform = 'scale(0)'} onClick={(e) => handleGoalChange(e)} className='hovered' id="c">HEADLESS</div> : <div onClick={(e) => handleGoalChange(e)} className="unhov" id="c" onMouseLeave={() => modalRef.current.style.transform = 'scale(0)'}>HEADLESS</div> }
             { (goal === "d") ? <div onMouseLeave={() => modalRef.current.style.transform = 'scale(0)'} onClick={(e) => handleGoalChange(e)} className='hovered' id="d">SEO READY</div> : <div onClick={(e) => handleGoalChange(e)} className="unhov" id="d" onMouseLeave={() => modalRef.current.style.transform = 'scale(0)'}>SEO READY</div>}
-            { (goal === "e") ? <div onMouseLeave={() => modalRef.current.style.transform = 'scale(0)'} onClick={(e) => handleGoalChange(e)} className='hovered' id="e">CACHING API</div> : <div onClick={(e) => handleGoalChange(e)} className="unhov" id="e" onMouseLeave={() => modalRef.current.style.transform = 'scale(0)'}>CACHING API</div> }
+            { (goal === "e") ? <div onMouseLeave={() => modalRef.current.style.transform = 'scale(0)'} onClick={(e) => handleGoalChange(e)} className='hovered' id="e">OXYGEN</div> : <div onClick={(e) => handleGoalChange(e)} className="unhov" id="e" onMouseLeave={() => modalRef.current.style.transform = 'scale(0)'}>OXYGEN</div> }
             { (goal === "f") ? <div onMouseLeave={() => modalRef.current.style.transform = 'scale(0)'} onClick={(e) => handleGoalChange(e)} className='hovered' id="f">STREAMING SSR</div> : <div onClick={(e) => handleGoalChange(e)} className="unhov" id="f" onMouseLeave={() => modalRef.current.style.transform = 'scale(0)'}>STREAMING SSR</div> }
             </div>
             <div ref={modalRef}className='slide2_modal'>
@@ -140,6 +140,9 @@ function App() {
           <p>
           We are passionate Software engineers with more than ten years of experience helping 
           DTC brands, digital marketers, influencers and developers improve Shopify websites performance and conversion rates.<br></br>
+          <hr></hr>
+          We strongly believe that e-commerce ecosystem deserves top-notch React.js UX. With Hyrdogen framework we
+          are able to deliver the best user experience to our customers.
           </p>
           <h3>Our Value:</h3>
           <p>👇🏻</p>
@@ -207,10 +210,15 @@ function App() {
             
           </div>
           <div className='slide6'>
-          <div>Learn from Google experts</div>
+          <div className='slide6_title'>Join the performance revolution</div>
           <div className='product_container'>
-          <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/fWoI9DXmpdk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/FPNZkPqUFIU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/Su-x4Mo5xmU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/C2lnXDAUPYs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/JgzMcXz5VeU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/a2YSgfwXc9c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           <iframe width="560" height="315" src="https://www.youtube.com/embed/7Rrv9qFMWNM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/fWoI9DXmpdk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           <iframe width="560" height="315" src="https://www.youtube.com/embed/AQqFZ5t8uNc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
           </div>
