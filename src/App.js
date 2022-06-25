@@ -3,13 +3,17 @@ import './App.css';
 import { ShowKubik } from './Components/Rubik.jsx'
 import { ShowBull } from './Components/bull';
 import { ShowRobot } from './Components/robot';
-import { ShowBaby} from './Components/baby'
+// import { ShowBaby} from './Components/baby'
 import amyrisSvg from './Amyris.svg'
 import tegra from './tegra.png'
 import lcp from './LCP.svg'
 import fid from './FID.svg'
 import cls from './CLS.svg'
+import noiranca from './noiranca.webp'
+import evans from './evans.webp'
+import scanlan from './scanlan.png'
 import visiva from './logo-visiva.png'
+import rock from './rock.png'
 import cuka from './cuka.jpeg'
 import alvarez from './alvarezlogo.svg'
 
@@ -18,8 +22,15 @@ function App() {
   const [slide, setSlide] = React.useState(1);
   const [goal, setGoal] = React.useState('');
   const modalRef = React.useRef();
+  const slideRef = React.useRef();
 
   React.useEffect(() => {
+    slideRef.current.style.opacity = 0;
+    // slideRef.current.style.transform = 'translateX(100vw)';
+    setTimeout(() => {
+      slideRef.current.style.opacity = 1;
+    }, 700)
+
     window.scroll({
       left: (slide === 1) ? 0 : window.innerWidth * (slide -1),
       behavior: 'smooth'
@@ -59,10 +70,10 @@ function App() {
           { (slide === 2) ? <ShowKubik /> : null }
           { (slide === 1) ? <ShowBull /> : null }
           { (slide === 4) ? <ShowRobot /> : null }
-          { (slide === 5) ? <ShowBaby /> : null }
           
           
-        <div className='section'>
+          
+        <div ref={slideRef} className='section'>
           <div className='slide1'>
             <h1 className="App-title">Catalyst</h1>
             <p className='App-subtitle'>Unleash Shopify speed.</p>
@@ -153,6 +164,9 @@ function App() {
             <img width="200" src={alvarez}></img>
 
             <img style={{backgroundColor: 'transparent' }} src={visiva}></img>
+            <img width="200" src={evans}></img>
+            <img src={scanlan}></img>
+            <img src={noiranca} style={{backgroundColor: 'transparent' }}></img>
           </div>
           </div>
           <div className='slide5'>
@@ -183,6 +197,7 @@ function App() {
             
           </div>
           <div className='slide6'>
+          <div>Learn from Google experts</div>
           <div className='product_container'>
           <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/fWoI9DXmpdk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           <iframe width="560" height="315" src="https://www.youtube.com/embed/7Rrv9qFMWNM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

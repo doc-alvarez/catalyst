@@ -7,6 +7,9 @@ html {
   cursor: pointer;
   /* background-color: #101019; */
   /* background-color: #505092; */
+  background-image: url('./blob-scene-haikei.svg');
+  background-repeat: repeat-x;
+  background-size: 100vw;
 }
 
 .brands_container {
@@ -23,8 +26,8 @@ html {
   margin: auto;
   height: 100vh;
   display: flex;
-  gap: 50px;
-  justify-content: space-around;
+  gap: 150px;
+  justify-content: center;
   align-items: center;
 }
 .brands_container {
@@ -42,8 +45,11 @@ html {
   border-radius: 20px;
   padding: 20px;
   background-color: white;
-  
-  
+}
+.brands_container img {
+  height: 150px;
+  width: 150px;
+  object-fit: contain;
 }
 .product_container iframe:hover, .brands_container img:hover {
   box-shadow: 0 0 20px 1px white;
@@ -65,7 +71,7 @@ html {
   opacity: 1;
 }
 .product:hover {
-  box-shadow: 0 0 20px 1px white;
+  box-shadow: 0 0 30px 1px white;
 }
 
 .price {
@@ -79,12 +85,13 @@ html {
 .App-main header {
   position: fixed;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   max-width: 100%;
-  gap: 70px;
+  gap: 60px;
   font-size: 20px;
   letter-spacing: 1px;
   padding: 30px;
+  margin-right: 60px;
   top:0;
   width: 100%;
   color: #ffffff5e;
@@ -102,6 +109,7 @@ div.section {
     display: flex;
     /* width: 400vw; */
     scroll-behavior: smooth;
+    transition: all ease 500ms;
 }
 
 .slide1, .slide2, .slide3, .slide4, .slide5, .slide6 {
@@ -142,10 +150,10 @@ div.section {
   display: grid;
   grid-template-columns: 33% 33% 33%;
   grid-template-rows: 25% 25% 25% 25%;
-  gap: 80px 10px;
+  gap: 40px 0px;
   justify-items: center;
   font-size: 30px;
-  margin: 250px 50px 0;
+  margin: 250px 50px 0 30px;
   align-items: center;
   letter-spacing: 5px;
   box-sizing: border-box;
@@ -358,8 +366,13 @@ footer {
   to {transform: 'translateX(-100vw)'}
 }
 body {
-  background: linear-gradient(180deg, #050a24,#8264d0, #22ebb9);
-  /* background-image: url('./circle-scatter-haikei.svg'); */
+  /* background: linear-gradient(180deg, #050a24,#8264d0, #22ebb9); */
+  /* background-image: url('./blob-scene-haikei.svg');
+  background-repeat: repeat-x;
+  background-size: 100vw; */
+  
+  
+  
 
 }
 
