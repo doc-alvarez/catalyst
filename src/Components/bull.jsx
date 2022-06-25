@@ -31,7 +31,7 @@ function MyAnimatedBox() {
 export function ShowBull(props) {
     return (
         <div className="robot_container" style = {{backgroundColor: "transparent", opacity: props.hide }}>
-        <Canvas camera={{ position: [7, -5, 29], fov: 5 }}>
+        <Canvas camera={{ position: [4, -5, 29], fov: 5 }}>
         
             <pointLight position={[60, 50, 10]} intensity={0.9} />
             <ambientLight />
