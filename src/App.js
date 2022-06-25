@@ -177,10 +177,10 @@ function App() {
               <div className='product'>
               <div>
                 <h1>R2-D2</h1>
-                <div>Subscription optimization</div>
-                <div>Code Reviews</div>
+                <div>Subscription Bundle</div>
+                <hr></hr>
+                <div>Performance optimizations</div>
                 <div>Daily audits</div>
-                <div>Team training</div>
                 <div>Performance Budget</div>         
                 <div>24/7 support</div>
               </div>
@@ -189,9 +189,11 @@ function App() {
               <div className='product'>
               <div>
                 <h1>C-3PO</h1>
-                <div>Full optimization</div>
+                <div>Splash Bundle</div>
+                <hr></hr>
+                <div>Full in-depth optimizations</div>
                 <div>One time</div>
-                <div>For Critical stores</div>
+                <div>Critical stores</div>
               </div>
                 <div className='price'>$499.99</div>
               </div>
@@ -199,9 +201,10 @@ function App() {
               <div>
                 <h1>Yoda</h1>
                 <div>Hydrogen Storefront</div>
+                <hr></hr>
                 <div>Built from scratch</div>
                 <div>Fully Customized</div>
-                <div>Best Experience</div>
+                <div>Fastest Experience</div>
               </div>
                 <div className='price'>$5000</div>
               </div>
